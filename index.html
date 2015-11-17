@@ -1,1 +1,125 @@
-<h1>Bitio Sistemas</h1>
+<html>
+<style>
+body { 
+background-color: #00DB9C;
+}
+img { 
+left:43%;
+}
+
+
+
+/*Ejemplo 1*/
+.ejemplo-1 img {
+transition: all 0.2s linear;
+}
+.ejemplo-1 .mascara {
+opacity: 0;
+background-color: rgba(46,157,120, 0.7);
+transition: all 0.3s ease-in-out;
+}
+.ejemplo-1 h2 {
+transform: translateX(-200px);/*Desplazamos a la izquierda*/
+opacity: 0;
+transition: all 0.7s ease-in-out;
+}
+.ejemplo-1 p {
+transform: translateX(200px);/*Desplazamos a la derecha*/
+opacity: 0;
+transition: all 0.4s linear;
+}
+.ejemplo-1 a.link{
+opacity: 0;
+transition: all 0.4s ease-in-out;
+transform: translateY(100px)/*Desplazamos para abajo*/
+}
+.ejemplo-1:hover img {
+transform: scale(1.1);/*Damos un ligero zoom a la imagen*/
+}
+.ejemplo-1:hover .mascara {
+opacity: 1;
+}
+.ejemplo-1:hover h2,
+.ejemplo-1:hover p,
+.ejemplo-1:hover a.link {
+opacity: 1;
+transform: translateX(0px);/*Regresamos a las posiciones originales*/
+}
+.ejemplo-1:hover p {
+transition-delay: 0.1s;
+}
+.ejemplo-1:hover a.link {
+transition-delay: 0.2s; /*Aplicamos un pequeño retardo para que se muestre al final*/
+transform: translateY(0px);
+}
+
+/*Estilos Base*/
+.contenedor-img {
+width: 100%;
+height:auto;
+float: left;
+overflow: hidden;
+position: relative;
+text-align: center;
+cursor: default;
+
+}
+.contenedor-img .mascara,.contenedor-img .contenido {
+width: 100%;
+height: auto;
+position: absolute;
+overflow: hidden;
+top: 0;
+left: 0
+}
+.contenedor-img img {
+display: block;
+position: relative;
+
+}
+.contenedor-img h2 {
+text-transform: uppercase;
+color: #fff;
+text-align: center;
+position: relative;
+font-size: 17px;
+padding: 10px;
+background: rgba(0, 0, 0, 0.9);
+margin: 20px 0 0 0
+}
+.contenedor-img p {
+font-size: 12px;
+position: relative;
+color: #fff;
+padding: 10px 20px 10px;
+text-align: center
+}
+.contenedor-img a.link {
+display: inline-block;
+text-decoration: none;
+padding: 7px 14px;
+background: #222;
+color: #fff;
+text-transform: uppercase;
+box-shadow: 0 0 1px #686868
+}
+.contenedor-img a.link:hover {
+box-shadow: 0 0 5px #686868
+}
+</style>
+
+<center>
+
+<div class="contenedor-img ejemplo-1"> 
+	
+     <img src="logo.png" />  
+     <div class="mascara"></div> 
+     <div class="contenido">
+         <h2>Estamos un paso adelante</h2>  
+         <p>Desarrollamos tu futuro.</p>
+         <a href="http://www.bitio.com.ar" class="link">Leer mas</a>  
+     </div>
+</div>
+</center>
+
+</html>
