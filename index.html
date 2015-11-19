@@ -3789,8 +3789,32 @@ Copyright (c) 2015 Daniel Eden
 
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//code.jquery.com" />
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+       <script type="text/javascript" charset="utf-8">
 
- 
+            function LoginButton_onclick() {
+                $.ajax({
+                       type: "POST",
+                       contentType: "application/json; charset=utf-8",
+                       dataType: "json",
+                       url:    "http://www.bitio.com.ar",
+                       data: '{}',
+                       success: function(msg) {
+                     
+                     
+                       $('#details').html(msg);
+                       },
+                       error: function(msg) {
+                       alert("Error");
+                       }
+                       });
+
+            }
+
+
+            </script>
 
  
 </head>
@@ -3932,7 +3956,12 @@ Copyright (c) 2015 Daniel Eden
    <p>Copyright Bitio Sistemas </p>
   </div>
 </main><!-- /.site__content -->
+<div id="DEMO">
+                    <input id="LoginButton" type="button" value="GET DATA" onclick="LoginButton_onclick()" /></div>
 
+                <div id="details" >
+                   
+                </div>
 <script >
 /*! jQuery v1.10.2 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
 //@ sourceMappingURL=jquery-1.10.2.min.map
