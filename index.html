@@ -3795,21 +3795,13 @@ Copyright (c) 2015 Daniel Eden
        <script type="text/javascript" charset="utf-8">
 
             function LoginButton_onclick() {
-                $.ajax({
-                       type: "POST",
-                       contentType: "application/json; charset=utf-8",
-                       dataType: "json",
-                       url:    "http://www.bitio.com.ar",
-                       data: '{}',
-                       success: function(msg) {
-                     
-                     
-                       $('#details').html(msg);
-                       },
-                       error: function(msg) {
-                       alert("Error");
-                       }
-                       });
+         $.ajax({
+   url:'http://www.bitio.com.ar',
+   type:'GET',
+   success: function(data){
+       $('#details').html(data.responseText);
+   }
+});
 
             }
 
@@ -3957,7 +3949,7 @@ Copyright (c) 2015 Daniel Eden
   </div>
 </main><!-- /.site__content -->
 <div id="DEMO">
-                    <input id="LoginButton" type="button" value="GET DATA" onclick="LoginButton_onclick()" /></div>
+                    <input id="LoginButton" type="button" value="Sitio web" onclick="LoginButton_onclick()" /></div>
 
                 <div id="details" >
                    
