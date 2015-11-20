@@ -41,7 +41,7 @@ input, select, button, textarea {
   line-height: 1.375;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-
+ border-radius: 50%;
   font-weight: 700;
 
   color: #f35626;
