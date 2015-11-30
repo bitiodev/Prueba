@@ -16,39 +16,18 @@ angular.module('starter.services', [])
         face: 'http://www.bitio.com.ar/CommingSoon/favicon.png'
     }];
 
-    GetUser = function () {
-        
-        $http({
-            method: 'GET',
-            url: 'http://localhost/WebService/ws.php'
-               
-                
-           
-        }).
-        success(function (data, status, headers, config) {
-            // any required additional processing here 
-            
-            return data;
-        }).
-        catch(function (data, status) {
-            deferred.reject(data, status, headers, config);
-        });
-
-       
-    }
-
     return {
         all: function () {
            
          
-            // return GetUser();
+            return chats;
 
-            return $http.get('http://localhost/WebService/ws.php')
-                      .then(function(result) {
-                          //resolve the promise as the data
-                          chats=result.data;
-                          return result;
-                      });
+            //return $http.get('http://www.bitio.com.ar/WebService/ws.php')
+            //          .then(function(result) {
+            //              //resolve the promise as the data
+            //              chats=result.data;
+            //              return result;
+            //          });
         
         
             
