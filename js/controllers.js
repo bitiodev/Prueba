@@ -4,10 +4,10 @@ angular.module('starter.controllers', [])
 
 .controller('ChatsCtrl', function ($scope, Chats, $http) {
 
-  /*  Chats.all().then(function (foos) {
+    Chats.all().then(function (foos) {
         $scope.chats = foos.data;
-    });*/
-  $scope.chats = Chats.all();
+    });
+  //$scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
   }

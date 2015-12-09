@@ -20,14 +20,14 @@ angular.module('starter.services', [])
         all: function () {
            
          
-            return chats;
+            
 
-            //return $http.get('http://www.bitio.com.ar/WebService/ws.php')
-            //          .then(function(result) {
-            //              //resolve the promise as the data
-            //              chats=result.data;
-            //              return result;
-            //          });
+            return $http.get('http://localhost/WebService/ws.php')
+                      .then(function(result) {
+                          //resolve the promise as the data
+                          chats=result.data;
+                          return result;
+                      });
         
         
             
